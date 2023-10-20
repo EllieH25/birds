@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title>Home</title>
 
 <style type="text/css">
@@ -18,8 +17,27 @@ body{
 	left: 0vw;
 }
 #homebar{
-	top: .75vw;
+	top: 0vw;
 	left: 1vw;
+	z-index: 2;
+	width: 6vw;
+	height: 4vw;
+	background-image: url(./cover-birds/loopbird.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#name{
+	z-index:1;
+	top:.5vw;
+	left:0vw;
+	position: fixed;
+	width:100vw;
+	height:6vw;
+	font-size:2vw;
+	color: black;
+	font-family: "Apple Chancery";
+	text-align: center;
 }
 #aboutbar{
 	top: .75vw;
@@ -34,18 +52,6 @@ body{
 	position: fixed;
 	font-size: 2vw;
 	color: white;
-}
-#name{
-	z-index:1;
-	top:-.20vw;
-	left:1vw;
-	position: fixed;
-	width:20vw;
-	height:6vw;
-	font-size:3vw;
-	color: white;
-	font-family: "Apple Chancery";
-	text-align: left;
 }
 #i1{
 	background-image: url(./cover-birds/1.jpg);
@@ -100,6 +106,7 @@ body{
 	position: absolute;
 }
 #portfolio1{
+	z-index: -1;
 	width:50vw;
 	height:30vw;
 	top:50vw;
@@ -111,6 +118,31 @@ body{
 	line-height: 20vw;
 	font-size: 5vw;
 }
+#aboutme{
+	z-index: -1;
+	width:50vw;
+	height:30vw;
+	top:82vw;
+	left:50vw;
+	background-image: url(./cover-birds/8.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+}
+#aboutme1{
+	z-index: -1;
+	width:50vw;
+	height:30vw;
+	top:82vw;
+	left:0vw;
+	position: absolute;
+	background-color: white;
+	text-align: center;
+	color: black;
+	line-height: 30vw;
+	font-size: 5vw;
+}
 #bar{
 	width:100vw;
 	height:2vw;
@@ -118,26 +150,32 @@ body{
 	left:0vw;
 	position: absolute;
 }
-
+#bar1{
+	width:100vw;
+	height:2vw;
+	top:112vw;
+	left:0vw;
+	position: absolute;
+}
 	</style>
 </head>
 <body>
 <div id="menubar"></div>
-<!-- <a href="index.html">
-<div id="homebar" class="menustyle">Home</div>
-</a> -->
-<a href="aboutme.html">
-<div id="aboutbar" class="menustyle">About Me</div>
-</a>
-<div id="name">Ellie Heller</div>
+<a href="index.html"><div id="homebar" class="menustyle"></div></a>
+<div id="name">Ellie Heller Photography</div>
 <div id="i1" class="cover-birds"></div>
 <div id="i2" class="cover-birds"></div>
 <div id="i3" class="cover-birds"></div>
 <div id="i4" class="cover-birds"></div>
 <div id="i5" class="cover-birds"></div>
 <div id="i6" class="cover-birds"></div>
-<div id="bar"></div>
 <div id="portfolio"></div>
-<div id="portfolio1"><p></p>Portfolio</div>
+<a href="portfolio.html"><div id="portfolio1"><p></p>Portfolio</div></a>
+<a href="aboutme.html">
+<div id="aboutme1" class="menustyle">About Me</div>
+</a>
+<div id="aboutme"></div>
+<div id="bar"></div>
+<div id="bar1"></div>
 </body>
 </html>
