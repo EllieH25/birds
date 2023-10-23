@@ -13,20 +13,19 @@ body{
 #menubar{
 	width: 100vw;
 	height: 4vw;
+	background-color: #a8c7b3;
 	position: fixed;
 	top: 0vw;
 	left: 0vw;
 }
 #homebar{
-	z-index: 2;
 	top: 0vw;
 	left: 1vw;
 	z-index: 2;
 	width: 6vw;
 	height: 4vw;
-	background-image: url(./cb/loopbird.png);
+	background-image: url(./cover-birds/loopbird.png);
 	background-size: cover;
-	position: fixed;
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -42,24 +41,67 @@ body{
 	font-family: "Apple Chancery";
 	text-align: center;
 }
-.cb{
+#aboutbar{
+	top: .75vw;
+	left: 84vw;
+	text-align: right;
+}
+.menustyle{
+	z-index: 2;
+	width: 15vw;
+	height: 3.25vw;
+	background-color: #a8c7b3;
+	position: fixed;
+	font-size: 2vw;
+	color: white;
+}
+#i1{
+	background-image: url(./cover-birds/1.jpg);
+	top:4vw;
+	left:0vw;
+}
+#i2{
+	background-image: url(./cover-birds/2.jpg);
+	top:4vw;
+	left:33vw;
+}
+#i3{
+	background-image: url(./cover-birds/3.jpg);
+	top:4vw;
+	left:67vw;
+}
+#i4{
+	background-image: url(./cover-birds/4.jpg);
+	top:26vw;
+	left:0vw;
+}
+#i5{
+	background-image: url(./cover-birds/5.jpg);
+	top:26vw;
+	left:33vw;
+}
+#i6{
+	background-image: url(./cover-birds/6.jpg);
+	top:26vw;
+	left:67vw;
+}
+
+.cover-birds{
 	z-index: -1;
-	width: 101vw;
-	height: 46vw;
+	width: 34vw;
+	height: 22vw;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 	position: absolute;
-	top:4vw;
-	left:0vw;
 }
 #portfolio{
 	z-index: -1;
 	width:50vw;
 	height:30vw;
-	top:52vw;
+	top:50vw;
 	left:0vw;
-	background-image: url(./cb/7.jpg);
+	background-image: url(./cover-birds/7.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -69,7 +111,7 @@ body{
 	z-index: -1;
 	width:50vw;
 	height:30vw;
-	top:52vw;
+	top:50vw;
 	left:50vw;
 	position: absolute;
 	background-color: white;
@@ -82,9 +124,9 @@ body{
 	z-index: -1;
 	width:50vw;
 	height:30vw;
-	top:84vw;
+	top:82vw;
 	left:50vw;
-	background-image: url(./cb/8.jpg);
+	background-image: url(./cover-birds/8.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -94,7 +136,7 @@ body{
 	z-index: -1;
 	width:50vw;
 	height:30vw;
-	top:84vw;
+	top:82vw;
 	left:0vw;
 	position: absolute;
 	background-color: white;
@@ -106,14 +148,14 @@ body{
 #bar{
 	width:100vw;
 	height:2vw;
-	top:82vw;
+	top:80vw;
 	left:0vw;
 	position: absolute;
 }
 #bar1{
 	width:100vw;
 	height:2vw;
-	top:114vw;
+	top:112vw;
 	left:0vw;
 	position: absolute;
 }
@@ -121,44 +163,21 @@ body{
 </head>
 <body>
 <div id="menubar"></div>
-<a href="index.html"><div id="homebar" class="menustyle" class="menubar_color"></div></a>
-
+<a href="index.html"><div id="homebar" class="menustyle"></div></a>
 <div id="name">Ellie Heller Photography</div>
-
+<div id="i1" class="cover-birds"></div>
+<div id="i2" class="cover-birds"></div>
+<div id="i3" class="cover-birds"></div>
+<div id="i4" class="cover-birds"></div>
+<div id="i5" class="cover-birds"></div>
+<div id="i6" class="cover-birds"></div>
 <div id="portfolio"></div>
 <a href="portfolio.html"><div id="portfolio1"><p></p>Portfolio</div></a>
-
 <a href="aboutme.html">
-<div id="aboutme1" >About Me</div>
+<div id="aboutme1" class="menustyle">About Me</div>
 </a>
 <div id="aboutme"></div>
-
 <div id="bar"></div>
 <div id="bar1"></div>
-
-<script type="text/javascript">
-	
-let coverbird = document.createElement("div");
-document.body.appendChild(coverbird);
-coverbird.classList.add("cb");
-coverbird.style.backgroundColor = "lightblue"
-let menucolor = document.getElementById('menubar')
-let hexarray = ["#9f9885", "#a8c7b3", "#6d8ab3","#939f6e","#d3dae6","#647a71"]
-
-function bird() {
-	var number = Math.floor(Math.random()*6);
-	console.log(number + ".jpg")
-
-	coverbird.style.backgroundImage = "url(./cb/" + number + ".jpg)"
-	menucolor.style.backgroundColor = hexarray[number]
-	console.log(hexarray[number])
-}
-
-bird()
-
-
-</script>
-
 </body>
-
 </html>
