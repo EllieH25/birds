@@ -7,9 +7,8 @@
 <style type="text/css">
 body{
 	background-color:#d8deee;
-	}
-/*	#a8c7b3
-	#d8deee*/
+}
+
 #menubar{
 	width: 100vw;
 	height: 4vw;
@@ -42,9 +41,10 @@ body{
 	font-family: "Apple Chancery";
 	text-align: center;
 }
+
 .cb{
 	z-index: -1;
-	width: 101vw;
+	width: 100vw;
 	height: 46vw;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -53,70 +53,54 @@ body{
 	top:4vw;
 	left:0vw;
 }
+
 #portfolio{
-	z-index: -1;
-	width:50vw;
-	height:30vw;
 	top:52vw;
 	left:0vw;
 	background-image: url(./cb/7.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	position: absolute;
 }
 #portfolio1{
-	z-index: -1;
-	width:50vw;
-	height:30vw;
 	top:52vw;
 	left:50vw;
-	position: absolute;
-	background-color: white;
-	text-align: center;
-	color: black;
-	line-height: 20vw;
-	font-size: 5vw;
 }
 #aboutme{
-	z-index: -1;
-	width:50vw;
-	height:30vw;
 	top:84vw;
 	left:50vw;
 	background-image: url(./cb/8.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	position: absolute;
 }
 #aboutme1{
+	top:84vw;
+	left:0vw;
+}
+.tabs{
 	z-index: -1;
 	width:50vw;
 	height:30vw;
-	top:84vw;
-	left:0vw;
 	position: absolute;
 	background-color: white;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 	text-align: center;
 	color: black;
 	line-height: 30vw;
 	font-size: 5vw;
 }
+
 #bar{
-	width:100vw;
-	height:2vw;
 	top:82vw;
 	left:0vw;
-	position: absolute;
 }
 #bar1{
-	width:100vw;
-	height:2vw;
 	top:114vw;
 	left:0vw;
+}
+.bark{
+	width: 100vw;
+	height: 2vw;
 	position: absolute;
 }
+
 	</style>
 </head>
 <body>
@@ -125,16 +109,14 @@ body{
 
 <div id="name">Ellie Heller Photography</div>
 
-<div id="portfolio"></div>
-<a href="portfolio.html"><div id="portfolio1"><p></p>Portfolio</div></a>
+<div id="portfolio" class="tabs"></div>
+<a href="portfolio.html"><div id="portfolio1" class="tabs">Portfolio</div></a>
 
-<a href="aboutme.html">
-<div id="aboutme1" >About Me</div>
-</a>
-<div id="aboutme"></div>
+<div id="aboutme" class="tabs"></div>
+<a href="aboutme.html"><div id="aboutme1" class="tabs">About Me</div></a>
 
-<div id="bar"></div>
-<div id="bar1"></div>
+<div id="bar" class="bark"></div>
+<div id="bar1" class="bark"></div>
 
 <script type="text/javascript">
 	
@@ -152,12 +134,8 @@ function bird() {
 	menucolor.style.backgroundColor = hexarray[number]
 	// console.log(hexarray[number])
 }
-
 bird()
 
-
 </script>
-
 </body>
-
 </html>
