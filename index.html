@@ -141,17 +141,16 @@ body{
 let coverbird = document.createElement("div");
 document.body.appendChild(coverbird);
 coverbird.classList.add("cb");
-coverbird.style.backgroundColor = "lightblue"
 let menucolor = document.getElementById('menubar')
-let hexarray = ["#9f9885", "#a8c7b3", "#6d8ab3","#939f6e","#d3dae6","#647a71"]
+let hexarray = ["#9f9885", "#a8c7b3", "#6d8ab3","#a2ab79","#949691","#647a71"]
 
 function bird() {
 	var number = Math.floor(Math.random()*6);
-	console.log(number + ".jpg")
+	// console.log(number + ".jpg")
 
 	coverbird.style.backgroundImage = "url(./cb/" + number + ".jpg)"
 	menucolor.style.backgroundColor = hexarray[number]
-	console.log(hexarray[number])
+	// console.log(hexarray[number])
 }
 
 bird()
