@@ -27,7 +27,6 @@ body{
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	z-index: 2;
 	background-color: #a9c7de;
 	position: fixed;
 }
@@ -57,11 +56,11 @@ body{
 /*	text-decoration: underline;*/
 }
 .squares{
-	width:6vw;
-	height:4vw;
+	width:7vw;
+	height:4.6vw;
 	top: 5vw;
-	left:51vw;
-	margin-left:.5vw;
+	left:2vw;
+	margin-left:.75vw;
 	display: inline-block;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -69,7 +68,7 @@ body{
 	position: relative;
 	border-style: solid;
 	border-width: .1vw;
-	border-color: black;
+/*	border-color: black;*/
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 #box{
@@ -82,12 +81,13 @@ body{
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	margin-bottom: 3vw;
-	margin-top: 5vw;
-	margin-left: 1vw;
+	position: absolute;
+	top: 5vw;
+	left: 1.5vw;
 }
 #area{
 	top:0vw;
+	left: 49vw;
 	width: 51vw;
 	position: absolute;
 	background-position: ;
@@ -96,83 +96,95 @@ body{
 	width: 48.1vw;
 	height: 2.3vw;
 	top: 37.7vw;
-	left: 1.55vw;
-	background-color: black;
-	opacity: 50%;
+	left: 1.5vw;
+	background-color: #a3a3a3;
 	position: absolute;
+	text-align: center;
+	color: black;
+	line-height: 2vw;
+	font-size: 1.5vw;
 }
 #right{
 	width: 4vw;
-	height: 2vw;
-	top: 38vw;
-	left: 40vw;
+	height: 1.9vw;
+	top: 37.9vw;
+	left: 31.5vw;
 	position: absolute;
+	background-image: url(right.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 #left{
 	width: 4vw;
-	height: 2vw;
-	top: 38vw;
-	left: 10vw;
+	height: 1.9vw;
+	top: 37.9vw;
+	left: 15.5vw;
 	position: absolute;
+	background-image: url(left.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 	</style>
 </head>
 <body>
 <div id="menubar"></div>
-<a href="index.html"><div id="homebar" class="menustyle"></div></a>
+<a href="index.html">
+	<div id="homebar"></div>
+</a>
 <div id="name">Ellie Heller Photography</div>
-
-<div id="photo"></div>
 
 <div id="pagename"> Portfolio</div>
 <div id="box"></div>
 <div id="area"></div>
-<div id="nextbar"></div>
-<div id="left">previous</div>
-<div id="right">next</div>
+<div id="nextbar">Highlights</div>
+<div id="left"></div>
+<div id="right"></div>
 
 <script type="text/javascript">
 
-	var counter = 0;
-
 	var box = document.getElementById('box');
-	box.style.backgroundImage = "url(./photos/2020_4-10_Lake/0.jpg)"
 	var left = document.getElementById('left');
 	var right = document.getElementById('right');
 	var number = 0;
 
-	function makeSquare (){
+	box.style.backgroundImage = "url(./photos/*highlights/0.jpg)";
+
+	function makeSquare (input){
 		var square = document.createElement("div");
 		area.appendChild(square);
-		square.style.backgroundImage = "url(./photos/2020_4-10_Lake/"+counter+".jpg)"
-		square.classList.add("squares");
-		
 		square.addEventListener("click", function () {
-
 			box.style.backgroundImage = square.style.backgroundImage;
-		})
-		counter = counter +1
+			// square.style.borderColor = "yellow";
+			number = input
+			})
+		square.style.backgroundImage = "url(./photos/*highlights/"+input+".jpg)"
+		square.classList.add("squares");
+		square.style.borderColor = "black";
+
 	}
 
 	right.addEventListener("click", function (){
 			number = number+1;
-			box.style.backgroundImage = "url(./photos/2020_4-10_Lake/"+number+".jpg)";
+			box.style.backgroundImage = "url(./photos/*highlights/"+number+".jpg)";
 			console.log(number)
-			if (number>55) {number = 0};
+			if (number>41) {number = 0};
 		})
 
 	left.addEventListener("click", function (){
 			number = number-1;
-			if (number<0) {number = 55};
-			box.style.backgroundImage = "url(./photos/2020_4-10_Lake/"+number+".jpg)";
+			if (number<0) {number = 41};
+			box.style.backgroundImage = "url(./photos/*highlights/"+number+".jpg)";
 			console.log(number)
 		})
 
-
-	for(var i=0; i<56; i=i+1){
-		makeSquare();
+	for(var i=0; i<42; i=i+1){
+		makeSquare(i);
 	}
+
+// if (box.style.backgroundImage = square.style.backgroundImage) {square.style.borderColor = "yellow";} else {square.style.borderColor = "black";}
 
 </script>
 
