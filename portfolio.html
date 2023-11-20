@@ -90,7 +90,6 @@ body{
 	left: 49vw;
 	width: 51vw;
 	position: absolute;
-	background-position: ;
 }
 #nextbar{
 	width: 48.15vw;
@@ -150,7 +149,7 @@ body{
 	var right = document.getElementById('right');
 	var number = 0;
 
-	box.style.backgroundImage = "url(./photos/2020_4-10_Lake/0.jpg)";
+	box.style.backgroundImage = "url(./photos/highlights/0.jpg)";
 
 	function makeSquare (input){
 		var square = document.createElement("div");
@@ -158,9 +157,9 @@ body{
 		square.addEventListener("click", function () {
 			box.style.backgroundImage = square.style.backgroundImage;
 			// square.style.borderColor = "yellow";
-			number = input
+			number = input;
 			})
-		square.style.backgroundImage = "url(./photos/2020_4-10_Lake/"+input+".jpg)"
+		square.style.backgroundImage = "url(./photos/highlights/"+input+".jpg)";
 		square.classList.add("squares");
 		square.style.borderColor = "black";
 
@@ -169,14 +168,14 @@ body{
 	right.addEventListener("click", function (){
 			number = number+1;
 			if (number>41) {number = 0};
-			box.style.backgroundImage = "url(./photos/2020_4-10_Lake/"+number+".jpg)";
+			box.style.backgroundImage = "url(./photos/highlights/"+number+".jpg)";
 			console.log(number)
 		})
 
 	left.addEventListener("click", function (){
 			number = number-1;
 			if (number<0) {number = 41};
-			box.style.backgroundImage = "url(./photos/2020_4-10_Lake/"+number+".jpg)";
+			box.style.backgroundImage = "url(./photos/highlights/"+number+".jpg)";
 			console.log(number)
 		})
 
