@@ -149,7 +149,7 @@ body{
 	var right = document.getElementById('right');
 	var number = 0;
 
-	box.style.backgroundImage = "url(./photos/highlights/0.jpg)";
+	box.style.backgroundImage = "url(./Photos/highlights/0.jpg)";
 
 	function makeSquare (input){
 		var square = document.createElement("div");
@@ -159,7 +159,7 @@ body{
 			// square.style.borderColor = "yellow";
 			number = input;
 			})
-		square.style.backgroundImage = "url(./photos/highlights/"+input+".jpg)";
+		square.style.backgroundImage = "url(./Photos/highlights/"+input+".jpg)";
 		square.classList.add("squares");
 		square.style.borderColor = "black";
 
@@ -168,14 +168,14 @@ body{
 	right.addEventListener("click", function (){
 			number = number+1;
 			if (number>41) {number = 0};
-			box.style.backgroundImage = "url(./photos/highlights/"+number+".jpg)";
+			box.style.backgroundImage = "url(./Photos/highlights/"+number+".jpg)";
 			console.log(number)
 		})
 
 	left.addEventListener("click", function (){
 			number = number-1;
 			if (number<0) {number = 41};
-			box.style.backgroundImage = "url(./photos/highlights/"+number+".jpg)";
+			box.style.backgroundImage = "url(./Photos/highlights/"+number+".jpg)";
 			console.log(number)
 		})
 
