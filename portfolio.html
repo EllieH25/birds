@@ -182,23 +182,42 @@ body{
 	var number = 0;
 	var folder_name = ["Highlights","March-October 2020, Putnam Valley", "October 2020, Central Park","November-December 2020, Putnam Valley","May 2021, Central Park","November 2021, Central Park","Feburary 2022, Central Park","March 2022, London","May 2022, Cape May","December 2022, Central Park","January 2023, Manhattan","February 2023, Central Park","March 2023, Bryant Park","March 2023, Central Park","April 2023, Putnam Valley","May 2023, Manhattan","May 2023, Kingston, Rhode Island","August 2023, Delaware and Cape May","October 2023, Central Park", "November 2023, Randall's Island"];
 	var folder_title = ["highlights","2020_4-10_Lake","2020_10_CP","2020_11-12_Lake","2021_5_CP","2021_11_CP","2022_2_CP","2022_3_London","2022_5_WSB","2022_12_CP","2023_1_NY","2023_2_CP","2023_3_Amwo","2023_3_CP","2023_4_Lake","2023_5_Intersession","2023_5_RI","2023_8_ABA","2023_10_CP", "2023_11_Randalls"];
-	var countimage = ["42","42","15","20","15","15","10","11","16","11","10","26","5","25","14","16","24","40","12", "16"];
+	var countimage = [42,42,15,20,15,15,10,10,16,11,10,26,4,25,14,16,24,40,12,9];
 	var imagecounter = 0;
 
 	box.style.backgroundImage = "url(./Photos/"+folder_title[imagecounter]+"/0.jpg)";
 
+	for(var i=0; i<42; i=i+1){
+		cSquack(i)
+	}
 
-// slideshow squares
-	function makeSquare (input){
+	function cSquack (input){
 		var square = document.createElement("div");
+		square.id="square"+i
 		area.appendChild(square);
 		square.addEventListener("click", function () {
 			box.style.backgroundImage = square.style.backgroundImage;
 			// square.style.borderColor = "yellow";
 			number = input;
+			console.log(square.id)
 			});
+	}
+	// for (var i=0; i<42; i=i+1) {
+	// 	var square = document.getElementById("square"+i);
+	// 	square.id = "square"+i;
+		
+	// }
+
+// slideshow squares
+	function makeSquare (input){
+		square = document.getElementById("square"+input);
 		square.style.backgroundImage = "url(./Photos/"+folder_title[imagecounter]+"/"+input+".jpg)";
 		square.classList.add("squares");
+	}
+	function noSquare (input){
+		square = document.getElementById("square"+input);
+		square.classList.remove("squares");
+		square.style.backgroundImage = "url()";
 	}
 
 	// setup for folder display
@@ -215,13 +234,21 @@ body{
 		folder.style.backgroundImage = "url(./folders/"+input+".jpg)";
 		foldername.innerHTML += folder_name[input];
 
-		// folderbar.addEventListener("click", function(){
-		// 	imagecounter = input;
-		// 	console.log(imagecounter);
-		// 	for(var i=0; i<countimage[imagecounter]; i=i+1){
-		// 		makeSquare(i);
-		// 	}
-		// })
+		folderbar.addEventListener("click", function(){
+			imagecounter = input;
+			console.log(imagecounter);
+			number = 0;
+			box.style.backgroundImage = "url(./Photos/"+folder_title[imagecounter]+"/0.jpg)";
+			
+			for(var j=countimage[imagecounter];j<42; j=j+1){
+				noSquare(j);
+			}
+
+			for(var i=0; i<countimage[imagecounter]; i=i+1){
+				makeSquare(i);
+			};
+
+		})
 
 	}
 
@@ -245,7 +272,6 @@ body{
 			console.log(number)
 		})
 	
-
 	for(var i=0; i<countimage[imagecounter]; i=i+1){
 		makeSquare(i);
 	}
