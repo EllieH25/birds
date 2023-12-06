@@ -101,7 +101,7 @@ body{
 	width: 4vw;
 	height: 1.9vw;
 	top: 37.9vw;
-	left: 31.55vw;
+	left: 38.55vw;
 	position: absolute;
 	background-image: url(right.png);
 }
@@ -109,7 +109,7 @@ body{
 	width: 4vw;
 	height: 1.9vw;
 	top: 37.9vw;
-	left: 15.55vw;
+	left: 8.55vw;
 	position: absolute;
 	background-image: url(left.png);
 }
@@ -179,6 +179,7 @@ body{
 	var box = document.getElementById('box');
 	var left = document.getElementById('left');
 	var right = document.getElementById('right');
+	var nextbar = document.getElementById('nextbar')
 	var number = 0;
 	var folder_name = ["Highlights","March-October 2020, Putnam Valley", "October 2020, Central Park","November-December 2020, Putnam Valley","May 2021, Central Park","November 2021, Central Park","Feburary 2022, Central Park","March 2022, London","May 2022, Cape May","December 2022, Central Park","January 2023, Manhattan","February 2023, Central Park","March 2023, Bryant Park","March 2023, Central Park","April 2023, Putnam Valley","May 2023, Manhattan","May 2023, Kingston, Rhode Island","August 2023, Delaware and Cape May","October 2023, Central Park", "November 2023, Randall's Island"];
 	var folder_title = ["highlights","2020_4-10_Lake","2020_10_CP","2020_11-12_Lake","2021_5_CP","2021_11_CP","2022_2_CP","2022_3_London","2022_5_WSB","2022_12_CP","2023_1_NY","2023_2_CP","2023_3_Amwo","2023_3_CP","2023_4_Lake","2023_5_Intersession","2023_5_RI","2023_8_ABA","2023_10_CP", "2023_11_Randalls"];
@@ -239,6 +240,7 @@ body{
 			console.log(imagecounter);
 			number = 0;
 			box.style.backgroundImage = "url(./Photos/"+folder_title[imagecounter]+"/0.jpg)";
+			nextbar.innerHTML= folder_name[imagecounter]
 			
 			for(var j=countimage[imagecounter];j<42; j=j+1){
 				noSquare(j);
