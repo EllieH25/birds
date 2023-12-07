@@ -129,12 +129,13 @@ body{
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	border-radius: 1vw;
 }
 .potato{
 	width: 15vw;
 	height: 11.2vw;
 	text-align: center;
-	font-size: .85vw;
+	font-size: .8vw;
 	position: absolute;
 	background-color: #a3a3a3;
 	top: 42vw;
@@ -143,12 +144,14 @@ body{
 	margin-bottom: 4vw;
 	display: inline-block;
 	position: relative;
+	border-radius: 1vw;
+	box-shadow: 0 .5vw 1vw 0 rgba(0, 0, 0, 0.2), 0 .75vw 2vw 0 rgba(0, 0, 0, 0.19);
 }
 .buggy{
 	width: 15vw;
 	height: 1vw;
 	left: -1.4vw;
-	top: -4.2vw;
+	top: -4.15vw;
 	margin-left: 1.4vw;
 	margin-bottom: 4vw;
 	display: inline-block;
@@ -181,7 +184,7 @@ body{
 	var right = document.getElementById('right');
 	var nextbar = document.getElementById('nextbar')
 	var number = 0;
-	var folder_name = ["Highlights","March-October 2020, Putnam Valley", "October 2020, Central Park","November-December 2020, Putnam Valley","May 2021, Central Park","November 2021, Central Park","Feburary 2022, Central Park","March 2022, London","May 2022, Cape May","December 2022, Central Park","January 2023, Manhattan","February 2023, Central Park","March 2023, Bryant Park","March 2023, Central Park","April 2023, Putnam Valley","May 2023, Manhattan","May 2023, Kingston, Rhode Island","August 2023, Delaware and Cape May","October 2023, Central Park", "November 2023, Randall's Island"];
+	var folder_name = ["Highlights","April-October 2020, Putnam Valley", "October 2020, Central Park","November-December 2020, Putnam Valley","May 2021, Central Park","November 2021, Central Park","Feburary 2022, Central Park","March 2022, London","May 2022, Cape May","December 2022, Central Park","January 2023, Manhattan","February 2023, Central Park","March 2023, Bryant Park","March 2023, Central Park","April 2023, Putnam Valley","May 2023, Manhattan","May 2023, Kingston, Rhode Island","August 2023, Delaware and Cape May","October 2023, Central Park", "November 2023, Randall's Island"];
 	var folder_title = ["highlights","2020_4-10_Lake","2020_10_CP","2020_11-12_Lake","2021_5_CP","2021_11_CP","2022_2_CP","2022_3_London","2022_5_WSB","2022_12_CP","2023_1_NY","2023_2_CP","2023_3_Amwo","2023_3_CP","2023_4_Lake","2023_5_Intersession","2023_5_RI","2023_8_ABA","2023_10_CP", "2023_11_Randalls"];
 	var countimage = [42,42,15,20,15,15,10,10,16,11,10,26,4,25,14,16,24,40,12,9];
 	var imagecounter = 0;
@@ -231,7 +234,7 @@ body{
 		folderbar.appendChild(foldername);
 		folder.classList.add("kangaroo");
 		folderbar.classList.add("potato");
-		foldername.classList.add("buggy")
+		foldername.classList.add("buggy");
 		folder.style.backgroundImage = "url(./folders/"+input+".jpg)";
 		foldername.innerHTML += folder_name[input];
 
@@ -284,3 +287,9 @@ body{
 
 </body>
 </html>
+
+<!-- problem photos:
+4-10-2020 lake: 25,26,40
+11-12-2020 lake: 3
+2-2022 cp: 3
+ -->
