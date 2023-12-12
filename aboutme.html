@@ -15,18 +15,18 @@ body{
 	position: fixed;
 	top: 0vw;
 	left: 0vw;
+	z-index: 2;
 }
 #homebar{
 	top: 0vw;
 	left: 1vw;
-	z-index: 2;
+	z-index: 3;
 	width: 6vw;
 	height: 4vw;
 	background-image: url(./cb/loopbird.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	z-index: 2;
 	background-color: #a9c7de;
 	position: fixed;
 }
@@ -41,6 +41,7 @@ body{
 	color: black;
 	font-family: "Apple Chancery";
 	text-align: center;
+	z-index: 2;
 }
 #pagename{
 	width: 16vw;
@@ -52,26 +53,35 @@ body{
 	color: black;
 	text-align: right;
 	font-family: "Apple Chancery";
+	z-index: 2;
 /*	text-decoration: underline;*/
 }
 
 #photo{
-	width: 50vw;
+	width: 47vw;
 	height: 30vw;
 	background-image: url(./cb/p1.jpg);
 	background-size: cover;
 	background-position: center;
 	position: absolute;
-	left: 0vw;
-	top: 5vw;
+	left: 2vw;
+	top: 6vw;
 }
 #entry{
 	position: absolute;
-	width: 40vw;
-	top: 7vw;
-	left: 55vw;
+	width: 45vw;
+	top: 6.5vw;
+	left: 53vw;
 	font-size: 1.5vw;
 	color: black;
+}
+#reflection{
+	width: 96vw;
+	height: 12vw;
+	left: 2vw;
+	top: 36.75vw;
+	position: absolute;
+	font-size: 1.25vw;
 }
 
 </style>
@@ -80,7 +90,7 @@ body{
 <body>
 
 <div id="menubar"></div>
-<a href="index.html"><div id="homebar" class="menustyle"></div></a>
+<a href="index.html"><div id="homebar"></div></a>
 <div id="name">Ellie Heller Photography</div>
 
 <div id="photo"></div>
@@ -89,11 +99,16 @@ body{
 
 
 <div id="entry"> 
-	Hi! My name is Ellie. I am a New York-based birder. I have loved birds since I saw Mallards in Central Park when I was three years old. My favorite bird is the Black-Capped Chickadee. Over Covid, I started photographing birds, and got really into it. All photos are mine unless otherwise stated. 
+	Hi! My name is Ellie Heller, and I am a high school student in New York. Ever since I saw a Mallard in Harlem Meer, Central Park at age 3, I've been obsessed with birds. As I grew older, my interest broadened from ducks to the songbirds I saw at a bird feeder I put up, to all birds in general. My favorite bird right now is the Black-Capped Chickadee, partially inspired by a short anecdote in the Genius of Birds by Jennifer Ackerman about their complex language, which is intriguing. Over Covid, I started photographing birds, and got really into it. All photos on this website are mine.
 <p>
 	I hope you enjoy my website!
 </p>
-
 </div>
+
+<div id="reflection">
+	<p>About the website:</p>
+	I’m a birder who loves coding. I have hundreds of photos, and I’ve wanted to create a portfolio for years. In 9th grade, I made a more basic portfolio with only 30 photos, but since then I have taken a lot more photos and wanted to display them. To make this website, I started out using the basics of my previous portfolio, which used a javascript for loop to create the squares and set the big image to be whatever image was clicked on. That code is at the heart of the squares with small images. After that, I started making the folder buttons, which used another for loop. The challenge was getting all the separate for loops to interact with each other. I made a couple of number variables that existed outside of any function and coded every for loop to use those variables instead of numbers. This meant all the functions could interact using those variables to tie them together. After that, it was mostly figuring out little bugs in order for them to interact. 
+</div>
+
 </body>
 </html>
