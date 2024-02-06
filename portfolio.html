@@ -1,3 +1,4 @@
+<!-- Change lines 206-208, 279 when adding new folder -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -202,9 +203,9 @@ body{
 	var right = document.getElementById('right');
 	var nextbar = document.getElementById('nextbar')
 	var number = 0;
-	var folder_name = ["Highlights","April-October 2020, Putnam Valley", "October 2020, Central Park","November-December 2020, Putnam Valley","May 2021, Central Park","November 2021, Central Park","Feburary 2022, Central Park","March 2022, London","May 2022, Cape May","December 2022, Central Park","January 2023, Manhattan","February 2023, Central Park","March 2023, Bryant Park","March 2023, Central Park","April 2023, Putnam Valley","May 2023, Manhattan","May 2023, Kingston, Rhode Island","August 2023, Delaware and Cape May","October 2023, Central Park", "November 2023, Randall's Island"];
-	var folder_title = ["highlights","2020_4-10_Lake","2020_10_CP","2020_11-12_Lake","2021_5_CP","2021_11_CP","2022_2_CP","2022_3_London","2022_5_WSB","2022_12_CP","2023_1_NY","2023_2_CP","2023_3_Amwo","2023_3_CP","2023_4_Lake","2023_5_Intersession","2023_5_RI","2023_8_ABA","2023_10_CP", "2023_11_Randalls"];
-	var countimage = [42,42,15,20,15,15,10,10,16,11,10,26,4,25,14,16,24,40,12,9];
+	var folder_name = ["Highlights","April-October 2020, Putnam Valley", "October 2020, Central Park","November-December 2020, Putnam Valley","May 2021, Central Park","November 2021, Central Park","Feburary 2022, Central Park","March 2022, London","May 2022, Cape May","December 2022, Central Park","January 2023, Manhattan","February 2023, Central Park","March 2023, Bryant Park","March 2023, Central Park","April 2023, Putnam Valley","May 2023, Manhattan","May 2023, Kingston, Rhode Island","August 2023, Delaware and Cape May","October 2023, Central Park", "November 2023, Randall's Island", "January 2024, Los Angeles"];
+	var folder_title = ["highlights","2020_4-10_Lake","2020_10_CP","2020_11-12_Lake","2021_5_CP","2021_11_CP","2022_2_CP","2022_3_London","2022_5_WSB","2022_12_CP","2023_1_NY","2023_2_CP","2023_3_Amwo","2023_3_CP","2023_4_Lake","2023_5_Intersession","2023_5_RI","2023_8_ABA","2023_10_CP", "2023_11_Randalls", "2024_1_LA"];
+	var countimage = [42,42,15,20,15,15,10,10,16,11,10,26,4,25,14,16,24,40,12,9,28];
 	var imagecounter = 0;
 
 	box.style.backgroundImage = "url(./Photos/"+folder_title[imagecounter]+"/0.jpg)";
@@ -274,8 +275,8 @@ body{
 		})
 
 	}
-
-	for(var i=0; i<20; i=i+1){
+// ***Change this line when adding new folders
+	for(var i=0; i<21; i=i+1){
 		makeFolder(i);
 	}
 
